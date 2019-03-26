@@ -5,11 +5,12 @@ import Header from './Header';
 import Navigation from './Navigation';
 import Page from './Page';
 import Footer from './Footer';
+import { HashRouter } from 'react-router-dom'
 
 class App extends Component {
   render() {
     return (
-      <Router basename={process.env.PUBLIC_URL}>
+      <HashRouter>
         <div className="app">
           <header>
             {<Header />}
@@ -24,7 +25,7 @@ class App extends Component {
           </main>
           <footer>{<Footer />}</footer>
         </div>
-      </Router>
+      </HashRouter>
     );
   }
 }
